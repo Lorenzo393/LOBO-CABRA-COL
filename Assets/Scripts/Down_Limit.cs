@@ -8,18 +8,11 @@ public class Down_Limit : MonoBehaviour
     public GameObject wolf;
     public GameObject goat;
     public GameObject cabbage;
-
-    private Rigidbody rb_player;
-    private Rigidbody rb_wolf;
-    private Rigidbody rb_goat;
-    private Rigidbody rb_cabbage;
     
-     void start(){
-        rb_player = player.GetComponent<Rigidbody> ();
-        rb_wolf = wolf.GetComponent<Rigidbody> ();
-        rb_goat = goat.GetComponent<Rigidbody> ();
-        rb_cabbage = cabbage.GetComponent<Rigidbody> ();
-    }
+    public Rigidbody rb_player;
+    public Rigidbody rb_wolf;
+    public Rigidbody rb_goat;
+    public Rigidbody rb_cabbage;
     private void OnCollisionEnter(Collision collision){
         if(collision.gameObject.CompareTag("Player")){
             rb_player.velocity = Vector3.zero;
