@@ -16,7 +16,7 @@ public class Middle_Start_Platform_Controller : MonoBehaviour
             scripter.GetComponent<Win_Or_Lose>().goat_midstart = true;
         }
         if(collision.gameObject.CompareTag("Cabbage")){
-           scripter.GetComponent<Win_Or_Lose>().cabagge_midstart = true;
+           scripter.GetComponent<Win_Or_Lose>().cabbage_midstart = true;
         }
     }
     private void OnCollisionExit(Collision collision){
@@ -30,7 +30,7 @@ public class Middle_Start_Platform_Controller : MonoBehaviour
             scripter.GetComponent<Win_Or_Lose>().goat_midstart = false;
         }
         if(collision.gameObject.CompareTag("Cabbage")){
-            scripter.GetComponent<Win_Or_Lose>().cabagge_midstart = false;
+            scripter.GetComponent<Win_Or_Lose>().cabbage_midstart = false;
         }
     }
 }

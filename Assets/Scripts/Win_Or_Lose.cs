@@ -15,28 +15,41 @@ public class Win_Or_Lose : MonoBehaviour
     public bool player_end;         // End
     public bool wolf_end;
     public bool goat_end;
-    public bool cabagge_end;        // End
+    public bool cabbage_end;        // End
     public bool player_midend;      // MidEnd
     public bool wolf_midend;
     public bool goat_midend;
-    public bool cabagge_midend;     // MidEnd
+    public bool cabbage_midend;     // MidEnd
     public bool player_midstart;    // MidStart
     public bool wolf_midstart;
     public bool goat_midstart;
-    public bool cabagge_midstart;   // MidStart
+    public bool cabbage_midstart;   // MidStart
     public bool player_start;       // Start
     public bool wolf_start;
     public bool goat_start;
-    public bool cabagge_start;      // Start
+    public bool cabbage_start;      // Start
 
-    public Text wltext;
-    private int wl = 0;
-    public void Win_Lose(int i){
-        wl = i;
-
-        if(wl == 1){
-            wltext.text = "Ganaste";
+    public Text screen_text;
+    void FixedUpdate(){
+        if(wolf_end == true && goat_end == true && cabbage_end == true){
+            screen_text.text = "GANASTE";
         }
-
+        if(wolf_end == true && goat_end == true && player_end != true && player_midend != true){
+            screen_text.text = "EL LOBO SE COMIO A LA CABRA";
+        }
+        if(goat_end == true && cabbage_end == true && player_end != true && player_midend != true){
+            screen_text.text = "LA CABRA SE COMIO LA COL";
+        }
+        if(wolf_start == true && goat_start == true && player_start != true && player_midstart != true){
+            screen_text.text = "EL LOBO SE COMIO A LA CABRA";
+        }
+        if(goat_start == true && cabbage_start == true && player_start != true && player_midstart != true){
+            screen_text.text = "LA CABRA SE COMIO LA COL";
+        }
+        /*
+        if(tiempo == x){
+            // Tiempo agotado
+        }
+        */
     }
 }

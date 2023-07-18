@@ -241,7 +241,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 28966119}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 1.5
   m_Drag: 1
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -430,7 +430,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: d6a3116c3e950204da28970819804afe, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -520,20 +520,20 @@ MonoBehaviour:
   player_end: 0
   wolf_end: 0
   goat_end: 0
-  cabagge_end: 0
+  cabbage_end: 0
   player_midend: 0
   wolf_midend: 0
   goat_midend: 0
-  cabagge_midend: 0
+  cabbage_midend: 0
   player_midstart: 0
   wolf_midstart: 0
   goat_midstart: 0
-  cabagge_midstart: 0
+  cabbage_midstart: 0
   player_start: 0
   wolf_start: 0
   goat_start: 0
-  cabagge_start: 0
-  wltext: {fileID: 1849781847}
+  cabbage_start: 0
+  screen_text: {fileID: 1849781847}
 --- !u!1 &267045075
 GameObject:
   m_ObjectHideFlags: 0
@@ -645,7 +645,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!1 &388320224
 GameObject:
   m_ObjectHideFlags: 0
@@ -1059,7 +1059,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!1 &949070564
 GameObject:
   m_ObjectHideFlags: 0
@@ -1330,7 +1330,7 @@ GameObject:
   - component: {fileID: 1849781848}
   - component: {fileID: 1849781847}
   m_Layer: 5
-  m_Name: Victory_Defeat
+  m_Name: Screen_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1352,8 +1352,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 113.21777, y: -116.1367}
-  m_SizeDelta: {x: 386.4355, y: 262.2733}
+  m_AnchoredPosition: {x: -0.000021095, y: 0.0024414}
+  m_SizeDelta: {x: 1920, y: 1079.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1849781847
 MonoBehaviour:
@@ -1368,7 +1368,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.21568629, g: 0.21568629, b: 0.21568629, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1376,19 +1376,19 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 40
-    m_FontStyle: 0
+    m_Font: {fileID: 12800000, guid: 5dd49b3eacc540408c98eee0de38e0f1, type: 3}
+    m_FontSize: 200
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 234
-    m_Alignment: 0
-    m_AlignByGeometry: 0
+    m_MaxSize: 300
+    m_Alignment: 4
+    m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'asfasfaf
+  m_Text: '
 
 '
 --- !u!222 &1849781848
@@ -1619,4 +1619,4 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2

@@ -14,7 +14,7 @@ public class End_Platform_Controller : MonoBehaviour{
             scripter.GetComponent<Win_Or_Lose>().goat_end = true;
         }
         if(collision.gameObject.CompareTag("Cabbage")){
-           scripter.GetComponent<Win_Or_Lose>().cabagge_end = true;
+           scripter.GetComponent<Win_Or_Lose>().cabbage_end = true;
         }
     }
     private void OnCollisionExit(Collision collision){
@@ -28,7 +28,7 @@ public class End_Platform_Controller : MonoBehaviour{
             scripter.GetComponent<Win_Or_Lose>().goat_end = false;
         }
         if(collision.gameObject.CompareTag("Cabbage")){
-            scripter.GetComponent<Win_Or_Lose>().cabagge_end = false;
+            scripter.GetComponent<Win_Or_Lose>().cabbage_end = false;
         }
     }
 }
