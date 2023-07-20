@@ -1,15 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using UnityEngine.UI;
-
-/*
-Win_Lose = 0 -> Nada
-Win_Lose = 1 -> Ganaste
-Win_Lose = 2 -> Perdiste: Lobo se comio a la Cabra
-Win_Lose = 3 -> Perdiste: Cabra se comio a la Col
-Win_Lose = 4 -> Perdiste: Tiempo agotado
-*/
+using UnityEngine;
 public class Win_Or_Lose : MonoBehaviour
 {
     public bool player_end;             // End
@@ -34,31 +26,37 @@ public class Win_Or_Lose : MonoBehaviour
     void FixedUpdate(){
         if(wolf_end == true && goat_end == true && cabbage_end == true){
             screen_text.text = "GANASTE";
+            gameObject.SetActive(false);
         }
         if(wolf_end == true && goat_end == true && player_end != true && player_midend != true){
             screen_text.text = "EL LOBO SE COMIO A LA CABRA";
             player_movement = false;
+            gameObject.SetActive(false);
         }
         if(goat_end == true && cabbage_end == true && player_end != true && player_midend != true){
             screen_text.text = "LA CABRA SE COMIO LA COL";
             player_movement = false;
+            gameObject.SetActive(false);
         }
         if(wolf_start == true && goat_start == true && player_start != true && player_midstart != true){
             screen_text.text = "EL LOBO SE COMIO A LA CABRA";
             player_movement = false;
+            gameObject.SetActive(false);
         }
         if(goat_start == true && cabbage_start == true && player_start != true && player_midstart != true){
             screen_text.text = "LA CABRA SE COMIO LA COL";
             player_movement = false;
+            gameObject.SetActive(false);
         }
         if(player_drowned == true){
             screen_text.text = "TE AHOGASTE";
             player_movement = false;
+            gameObject.SetActive(false);
         }
-        /*
-        if(tiempo == x){
-            // Tiempo agotado
+        if(gameObject.GetComponent<Timer>().time <= 0){
+            screen_text.text = "SE ACABO EL TIEMPO";
+            player_movement = false;
+            gameObject.SetActive(false);
         }
-        */
     }
 }
